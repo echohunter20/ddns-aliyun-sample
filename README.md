@@ -20,4 +20,4 @@ shell
 
 `sh ./shell/aliyun.sh accessKeyId accessKeySecret Domain @`
 
-shell命令会先去通过http://members.3322.org/dyndns/getip获取本地公网ip，然后获取域名绑定的IP，如果不相等就会把阿里云上的域名绑定的ip改为本地公网ip。如果域名记录不存在就会新增加一条解析记录解析到本地公网ip。
+shell命令会先去通过[dyndns](http://members.3322.org/dyndns/getip)获取本地公网ip，然后获取域名绑定的IP，如果不相等就会把阿里云上的域名绑定的ip改为本地公网ip。如果域名记录不存在就会新增加一条解析记录解析到本地公网ip。
