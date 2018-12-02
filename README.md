@@ -12,7 +12,7 @@ shell
 Java和nodejs版本待后续更新，先上传shell命令的。
 ## shell
 
-**如果是修改二级域名绑定的IP就是用下面的命令：**
+**如果是修改子域名绑定的IP就是用下面的命令：**
 
 `sh ./shell/aliyun-domain.sh accessKeyId accessKeySecret Domain DomainRR`
 
