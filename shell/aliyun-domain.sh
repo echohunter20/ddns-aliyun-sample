@@ -71,8 +71,6 @@ getRecordId() {
 	echo "getRecordId------------queryString------$queryString-------------" >&2
 	local result=$(sendRequestRR "$queryString")
 	echo "getRecordId()------------result------------$result------------" >&2
-	#local domaintest=$(echo $result | grep -q '{"RR":"yang","Status":"ENABLE","Value":"[0-9\.]*","Weight":1,"RecordId":"[0-9]*"')
-	#echo "-----------domaintest---------------$domaintest----------" >&2
 	local recordId=$(echo $result | sed 's/.*{"RR":"@","Status":"ENABLE","Value":"\([0-9\.]*\)","Weight":1,"RecordId":"\([0-9]*\)",.*/\2/g')
 	echo "getRecordId() ----------------------test------- recordId-------$recordId-----------------------------" >&2
 	if [ "$recordId" == "$result" ]; then
